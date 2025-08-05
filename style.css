@@ -3,14 +3,26 @@
     scroll-behavior: smooth;
   }
   
+ body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: url('https://github.com/Raghad-25/raghad_portfoli/blob/main/man-experiencing-virtual-reality-with-device_23-2148864941.jpg?raw=true') no-repeat center center fixed;
+  background-size: cover; /* تغطي الخلفية كامل الشاشة على الشاشات الكبيرة */
+  color: white;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
   body {
-    margin: 0;
-    font-family: 'Orbitron', sans-serif;
-   background: url('man-experiencing-virtual-reality-with-device_23-2148864941.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    overflow-x: hidden;
+    background-size: contain; /* على الشاشات الصغيرة، الخلفية تتناسب مع الحجم */
   }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* تغييرات إضافية على الأجهزة الصغيرة مثل الآيفون أو الآيباد */
+  }
+}
   
   body::before {
     content: "";
@@ -217,4 +229,5 @@
     padding: 8px 18px; /* تقليل حجم الأزرار في الأجهزة الصغيرة */
   }
 }
+
 
